@@ -1,0 +1,29 @@
+{
+  "name": "qore-fly-fishing",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "dev": "vite --port=3001",
+    "build": "vite build",
+    "serve": "vite preview",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "@tanstack/router-plugin": "^1.111.12",
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.2",
+    "babel-plugin-react-compiler": "^19.0.0-beta-e1e972c-20250221",
+    "eslint-plugin-react-compiler": "^19.0.0-beta-e1e972c-20250221",
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.111.11",
+    "@tanstack/router-devtools": "^1.111.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
