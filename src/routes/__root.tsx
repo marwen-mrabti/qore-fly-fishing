@@ -1,6 +1,6 @@
 import { Outlet, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
-import Header from "@/components/shared/Header";
+import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
 import "@/globals.css";
 

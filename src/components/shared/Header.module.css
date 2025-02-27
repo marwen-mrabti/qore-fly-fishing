@@ -3,20 +3,24 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
 }
 
-.logoContainer {
+.logoWrapper {
   display: flex;
   align-items: center;
 }
 
 .logo {
-  height: 40px;
-  margin-right: 15px;
+  height: 3.5rem;
+  margin-right: 1rem;
 }
 
 .logoText {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--brown-500);
   font-family: "Gluten", cursive;
@@ -26,43 +30,8 @@
   font-variation-settings: "slnt" 0;
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-.navigation ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.navigation a {
-  color: #555;
-  font-size: 1rem;
-}
-
-.active {
-  color: var(--neutral-900) !important;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-}
-
-.navigation a:hover {
-  color: var(--neutral-900);
-}
-
-.mobileMenu {
-  display: none;
-}
-
-
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .logoText {
-    display: none;
-  }
-  .navigation ul {
     display: none;
   }
 }
