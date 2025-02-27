@@ -24,18 +24,17 @@ const NavList: T_NavItem[] = [
   },
 ];
 
-export default function Navbar() {
+export default function Navbar({ styles }: { styles: Record<string, string> }) {
   return (
-    <nav className="navigation">
+    <nav className={styles.navigation}>
       <ul>
         {NavList.map((item) => (
           <li key={item.name}>
             <Link
               to={item.link}
               preload="intent"
-              className=""
               activeProps={{
-                className: "active",
+                className: styles.active,
               }}
             >
               {item.name}

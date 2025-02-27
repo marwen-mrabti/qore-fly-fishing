@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
+import { Outlet, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/footer";
 import "@/globals.css";
 
 export const Route = createRootRoute({
@@ -10,9 +10,10 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <div className="app">
+    <div className="container">
       <Header />
       <Outlet />
+      <Footer />
       {process.env.NODE_ENV === "development" ? <TanStackRouterDevtools /> : null}
     </div>
   );
