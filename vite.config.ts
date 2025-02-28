@@ -26,5 +26,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/qore-fly-fishing",
+  base: "/qore-fly-fishing/",
 });
