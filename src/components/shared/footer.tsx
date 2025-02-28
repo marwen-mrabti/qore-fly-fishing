@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className="container">
+      <div className={styles.footerContainer}>
         <div className={`${styles.footerContent}`}>
           <nav className={styles.footerNav}>
             <div className={styles.footerLogo}>

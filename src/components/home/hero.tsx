@@ -23,6 +23,7 @@ export default function Hero() {
           <img
             src={HeroImgDesktop}
             alt="Person fly fishing on a lake"
+            loading="lazy"
             className={styles.heroImage}
           />
         </picture>

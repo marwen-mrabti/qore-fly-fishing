@@ -41,7 +41,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`container ${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+    <header className={` ${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.logoWrapper}>
         <Link to="/" preload="intent" aria-label="Go to Home">
           <img src={Logo} alt="Central Texas Fly Fishing Logo" className={styles.logo} />

@@ -7,6 +7,8 @@
 
 .hero {
   width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1.5rem;

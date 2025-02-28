@@ -1,0 +1,78 @@
+.card {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-family: "Gluten", cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--neutral-900);
+}
+
+.description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--neutral-600);
+  margin: 0;
+}
+
+.readMore {
+  width: fit-content;
+  font-size: 0.875rem;
+  background-color: var(--neutral-100);
+  color: var(--neutral-900);
+  text-decoration: none;
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.readMore:hover {
+  filter: brightness(90%);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--neutral-100);
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card:first-child {
+    border-top: 1px solid var(--neutral-100);
+    padding-top: 1rem;
+  }
+  .content {
+    flex-direction: row;
+  }
+  .imageContainer {
+    width: 100%;
+  }
+  .image {
+    width: 100px;
+    height: 100px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+}
