@@ -1,16 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import styles from "./featured-options.module.css";
-import { ExploreFlyFishing } from "@/assets";
+import { ExperienceFlyFishing, ExploreFlyFishing, GearUP } from "@/assets";
 
-const featuredOptionsData = [
+type FeaturedOption = {
+  id: string;
+  title: string;
+  content: {
+    heading: string;
+    description: string;
+    imageUrl: string;
+    imageAlt: string;
+    learnMoreUrl: string;
+  };
+};
+
+const featuredOptionsData: FeaturedOption[] = [
   {
     id: "explore",
     title: "Explore Fly Fishing",
     content: {
       heading: "Explore Fly Fishing",
       description:
-        "Proin nibh nisl condimentum id venenatis a condimentum vitae sapien. Tellus in metus vulputate eu sc",
+        "Proin nibh nisl condimentum id venenatis a condimentum vitae sapien. Tellus in metus vulputate eu sc.",
       imageUrl: ExploreFlyFishing,
       imageAlt: "Trout fish caught while fly fishing",
       learnMoreUrl: "/explore-fly-fishing",
@@ -22,8 +34,8 @@ const featuredOptionsData = [
     content: {
       heading: "Fly Fishing Experiences",
       description:
-        "Discover guided trips and unique fly fishing adventures for all skill levels.",
-      imageUrl: "",
+        "Elit pellentesque habitant morbi tristique senectus et netus et. In hendrerit gravida rutrum quisque.",
+      imageUrl: ExperienceFlyFishing,
       imageAlt: "Fly fishing experiences",
       learnMoreUrl: "/fly-fishing-experiences",
     },
@@ -34,8 +46,8 @@ const featuredOptionsData = [
     content: {
       heading: "Gear Up and Catch More",
       description:
-        "Find the best equipment and accessories to enhance your fly fishing experience.",
-      imageUrl: "",
+        "In metus vulputate eu scelerisque felis imperdiet. Nunc scelerisque viverra mauris in aliquam sem. Sed elementum urna et.",
+      imageUrl: GearUP,
       imageAlt: "Fly fishing gear",
       learnMoreUrl: "/fishing-gear",
     },
@@ -44,14 +56,57 @@ const featuredOptionsData = [
 
 export default function FeaturedOptions() {
   const [openSection, setOpenSection] = useState<string | null>("explore");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
 
   const toggleSection = (sectionId: string) => {
+    if (isMobile) return;
+
     if (openSection === sectionId) {
       setOpenSection(null);
     } else {
       setOpenSection(sectionId);
     }
   };
+
+  if (isMobile) {
+    return (
+      <div className={styles.sectionWrapper}>
+        <h2 className={styles.heading}>Featured Options</h2>
+        <div className={styles.mobileGrid}>
+          {featuredOptionsData.map((option) => (
+            <div
+              key={option.id}
+              className={styles.mobileCard}
+              style={{ backgroundImage: `url(${option.content.imageUrl})` }}
+            >
+              <div className={styles.mobileCardContent}>
+                <h3 className={styles.mobileCardTitle}>{option.title}</h3>
+                <p className={styles.mobileCardDescription}>
+                  {option.content.description}
+                </p>
+                <a href={option.content.learnMoreUrl} className={styles.learnMore}>
+                  Learn more
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.sectionWrapper}>
