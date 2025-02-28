@@ -6,6 +6,7 @@ import { routeTree } from './routeTree.gen'
 // Set up a Router instance
 const router = createRouter({
   routeTree,
+  basepath: "/qore-fly-fishing/",
   defaultPreload: 'intent',
 })
 
