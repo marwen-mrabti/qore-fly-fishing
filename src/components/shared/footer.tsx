@@ -31,7 +31,7 @@ function Footer() {
           </div>
         </div>
         <div className={styles.copyright}>
-          © 2024 Central Texas Fly Fishing All Rights Reserved.
+          © {new Date().getFullYear()} Central Texas Fly Fishing All Rights Reserved.
         </div>
       </div>
     </footer>

@@ -139,14 +139,14 @@
 .mobileCardTitle {
   font-size: 18px;
   font-weight: 600;
-  color: #222;
+  color: var(--neutral-900);
   margin: 0 0 12px 0;
 }
 
 .mobileCardDescription {
   font-size: 14px;
   line-height: 1.5;
-  color: #555;
+  color: var(--neutral-500);
   margin: 0 0 16px 0;
 }
 
