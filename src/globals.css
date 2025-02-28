@@ -83,6 +83,8 @@ h6 {
   --brown-500: #514432;
   --tan-400: #f1ece1;
   --neutral-50: #f7f7f6;
+  --neutral-100: #dfdedd;
+  --neutral-400: #969491;
   --neutral-600: #65625e;
   --neutral-900: #1c1812;
 }
@@ -94,8 +96,16 @@ body {
   line-height: 1.6;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
 .container {
   max-width: var(--container-width);
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
 }

@@ -1,7 +1,9 @@
 export { default as Logo } from "./fish-logo.svg";
-export { default as HeroImg } from "./hero-fishing.svg";
+export { default as HeroImgDesktop } from "./hero-fishing-desktop.svg";
+export { default as HeroImgMobile } from "./hero-fishing-mobile.svg";
 export { default as ExploreFlyFishing } from "./explore-fly-fishing.svg";
 export { default as JohnStory } from "./john-story.svg";
 export { default as JourneyStory } from "./journey-story.svg";
 export { default as CatchStory } from "./catch-story.svg";
-export { default as troutStory } from "./trout-story.svg";
+export { default as TroutStory } from "./trout-story.svg";
+export { default as FishPlaceholder } from "./fish-placeholder.jpg";

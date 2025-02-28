@@ -10,7 +10,7 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <div className="container">
+    <div className="app">
       <Header />
       <Outlet />
       <Footer />
